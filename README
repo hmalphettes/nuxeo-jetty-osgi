@@ -1,0 +1,20 @@
+Attempt to make nuxeo ecm (http://www.nuxeo.com) work with jetty OSGi.
+- jetty-osgi-7.0.1.012 for equinox supports an "endorsedlibs" folder where we can place jar files that equinox will search as if they were an endorsed library.
+- our primary target consists of supporting the user management of nuxeo inside jetty-osgi running inside eclipse equinox.
+- nuxeo sources are taken from the latest 5.3 version of the mercurial repository.
+
+Status:
+There are a number of split-packages issues.
+For example in org.nuxeo.ecm.platform, org.nuxeo.ecm.platform.UserService accesses protected fields of org.nuxeo.ecm.platform.usermanager.UserManagerDescriptor. The UserManagerDescriptor is in a different plugin and it fails to execute with the exception:
+java.lang.IllegalAccessError: tried to access field org.nuxeo.ecm.platform.usermanager.UserManagerDescriptor.groupMembersField from class org.nuxeo.ecm.platform.usermanager.UserService
+	at org.nuxeo.ecm.platform.usermanager.UserService.recomputeUserManager(UserService.java:77)
+	at org.nuxeo.ecm.platform.usermanager.UserService.getUserManager(UserService.java:48)
+	at osgitest.Activator.start(Activator.java:42)
+
+Making the fields of that object public solves the issue.
+Using the protected setters solve the issue.
+Making this bundle a fragment of the api bundle would solve the issue but prevent access to UserService from other bundles.
+
+We will keep track of each change we did to nuxeo sources here and contact the nuxeo team when we have been far enough to make this an interesting contribution.
+
+Everything here is licensed according to nuxeo's open-source terms.
