@@ -85,7 +85,7 @@ public class UserManagerDescriptor implements Serializable {
     @XNode("users/searchFields@append")
     public boolean userSearchFieldsAppend;
 
-    Map<String, MatchType> userSearchFields = new LinkedHashMap<String, MatchType>();
+    public Map<String, MatchType> userSearchFields = new LinkedHashMap<String, MatchType>();
 
     @XNodeList(value = "users/searchFields/exactMatchSearchField", componentType = String.class, type = String[].class)
     protected void setExactMatchUserSearchFields(String[] fields) {
