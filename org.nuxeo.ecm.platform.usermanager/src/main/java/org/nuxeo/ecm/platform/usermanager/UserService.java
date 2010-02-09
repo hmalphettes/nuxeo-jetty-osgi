@@ -68,12 +68,8 @@ public class UserService extends DefaultComponent {
         merged.userSearchFields.put("username", MatchType.SUBSTRING);
         merged.userSearchFields.put("firstName", MatchType.SUBSTRING);
         merged.userSearchFields.put("lastName", MatchType.SUBSTRING);
-try {
-	System.err.println();
+        
         merged.groupDirectoryName = "groupDirectory";
-} catch (Throwable t) {
-	t.printStackTrace();
-}
         merged.groupMembersField = "members";
         merged.groupSubGroupsField = "subGroups";
         merged.groupParentGroupsField = "parentGroups";
