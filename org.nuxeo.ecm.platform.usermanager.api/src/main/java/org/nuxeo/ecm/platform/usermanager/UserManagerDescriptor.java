@@ -39,34 +39,34 @@ public class UserManagerDescriptor implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @XNode("@class")
-    protected Class<?> userManagerClass;
+    public Class<?> userManagerClass;
 
     @XNode("defaultGroup")
-    protected String defaultGroup;
+    public String defaultGroup;
 
     @XNodeList(value = "defaultAdministratorId", type = ArrayList.class, componentType = String.class)
-    protected List<String> defaultAdministratorIds;
+    public List<String> defaultAdministratorIds;
 
     @XNodeList(value = "administratorsGroup", type = ArrayList.class, componentType = String.class)
-    protected List<String> administratorsGroups;
+    public List<String> administratorsGroups;
 
     @XNode("disableDefaultAdministratorsGroup")
-    Boolean disableDefaultAdministratorsGroup;
+    public Boolean disableDefaultAdministratorsGroup;
 
     @XNode("userSortField")
-    protected String userSortField;
+    public String userSortField;
 
     @XNode("groupSortField")
-    protected String groupSortField;
+    public String groupSortField;
 
     @XNode("users/directory")
-    protected String userDirectoryName;
+    public String userDirectoryName;
 
     @XNode("users/emailField")
-    protected String userEmailField;
+    public String userEmailField;
 
     @XNode("users/listingMode")
-    protected String userListingMode;
+    public String userListingMode;
 
     // BBB old syntax
     @XNode("userListingMode")
@@ -74,7 +74,7 @@ public class UserManagerDescriptor implements Serializable {
         this.userListingMode = userListingMode;
     }
 
-    protected boolean userSearchFieldsPresent = false;
+    public boolean userSearchFieldsPresent = false;
 
     @XNode("users/searchFields")
     protected void setUserSearchFieldsPresent(@SuppressWarnings("unused")
@@ -83,7 +83,7 @@ public class UserManagerDescriptor implements Serializable {
     }
 
     @XNode("users/searchFields@append")
-    protected boolean userSearchFieldsAppend;
+    public boolean userSearchFieldsAppend;
 
     Map<String, MatchType> userSearchFields = new LinkedHashMap<String, MatchType>();
 
@@ -110,7 +110,7 @@ public class UserManagerDescriptor implements Serializable {
         setSubstringMatchUserSearchFields(fields);
     }
 
-    protected Pattern userPasswordPattern;
+    public Pattern userPasswordPattern;
 
     @XNode("userPasswordPattern")
     protected void setUserPasswordPattern(String pattern) {
@@ -118,25 +118,25 @@ public class UserManagerDescriptor implements Serializable {
     }
 
     @XNode("users/anonymousUser")
-    protected VirtualUserDescriptor anonymousUser;
+    public VirtualUserDescriptor anonymousUser;
 
     @XNodeMap(value = "users/virtualUser", key = "@id", type = HashMap.class, componentType = VirtualUserDescriptor.class)
-    protected Map<String, VirtualUserDescriptor> virtualUsers;
+    public Map<String, VirtualUserDescriptor> virtualUsers;
 
     @XNode("groups/directory")
-    protected String groupDirectoryName;
+    public String groupDirectoryName;
 
     @XNode("groups/membersField")
-    protected String groupMembersField;
+    public String groupMembersField;
 
     @XNode("groups/subGroupsField")
-    protected String groupSubGroupsField;
+    public String groupSubGroupsField;
 
     @XNode("groups/parentGroupsField")
-    protected String groupParentGroupsField;
+    public String groupParentGroupsField;
 
     @XNode("groups/listingMode")
-    protected String groupListingMode;
+    public String groupListingMode;
 
     /**
      * Merge with data from another descriptor.

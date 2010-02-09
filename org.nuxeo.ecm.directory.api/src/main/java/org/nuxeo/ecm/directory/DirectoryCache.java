@@ -40,17 +40,17 @@ import org.nuxeo.ecm.core.api.DocumentModel;
  */
 public class DirectoryCache {
 
-    protected final Map<String, CachedEntry> entryStore = new HashMap<String, CachedEntry>();
+	public final Map<String, CachedEntry> entryStore = new HashMap<String, CachedEntry>();
 
-    protected final Map<String, CachedEntry> entryStoreWithoutReferences = new HashMap<String, CachedEntry>();
+	public final Map<String, CachedEntry> entryStoreWithoutReferences = new HashMap<String, CachedEntry>();
 
     // time out in seconds an entry is kept in cache, entryCacheTimeout <= 0
     // means entries are kept in cache till manual invalidation
-    protected int timeout = 0;
+	public int timeout = 0;
 
     // maximum number of entries kept in cache, entryCacheMaxSize <= 0 means
     // cache disabled; if the limit is reached, all entries get invalidated
-    protected int maxSize = 0;
+	public int maxSize = 0;
 
     protected boolean isCacheEnabled() {
         return maxSize > 0;
