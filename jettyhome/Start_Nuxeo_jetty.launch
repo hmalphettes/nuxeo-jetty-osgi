@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jetty.osgi.pde.launch.ui.jettyosgilaunch">
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Start_Nuxeo_jetty"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="4"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="javaProjectsToRunAsWebapps" value=""/>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -clean"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.hook.configurators.include=org.eclipse.equinox.osgi.extensions.endorsedlibs.EndorsedLibsHook -Dosgi.framework.extensions=org.eclipse.equinox.osgi.extensions.endorsedlibs -Dosgi.equinox.endorsed.libs.folder=${workspace_loc:jettyhome}/endorsedlibs -Djetty.home=${workspace_loc:jettyhome}"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="target_bundles" value="org.eclipse.jetty.servlet@default:default,com.springsource.javax.mail@default:default,javax.servlet@default:default,org.eclipse.jetty.annotations@default:default,org.eclipse.jetty.util@default:default,org.eclipse.equinox.registry@default:default,org.eclipse.core.resources@default:default,org.eclipse.jetty.security@default:default,com.springsource.javax.transaction@default:default,log4j.over.slf4j@default:default,org.eclipse.core.expressions@default:default,org.eclipse.osgi.services@default:default,org.eclipse.equinox.http.servlet@default:default,org.eclipse.jetty.servlets@default:default,org.eclipse.equinox.app@default:default,org.eclipse.jetty.osgi.boot.logback@default:false,org.eclipse.jetty.jmx@default:default,org.eclipse.jetty.xml@default:default,org.eclipse.jetty.client@default:default,org.eclipse.equinox.preferences@default:default,org.apache.geronimo.specs.geronimo-activation_1.1_spec@default:default,com.ibm.icu@default:default,org.eclipse.jetty.deploy@default:default,org.eclipse.equinox.common@2:true,org.eclipse.debug.core@default:default,org.objectweb.asm@default:default,org.eclipse.jetty.server@default:default,org.eclipse.jetty.websocket@default:default,org.eclipse.jetty.jndi@default:default,org.eclipse.jetty.osgi.boot.jsp@default:false,org.eclipse.jetty.osgi.boot@default:true,org.eclipse.jetty.rewrite@default:default,org.mortbay.jetty.jsp-2.1@default:default,org.eclipse.jetty.webapp@default:default,org.eclipse.core.runtime@default:true,org.eclipse.core.contenttype@default:default,org.eclipse.jetty.osgi.boot.jdt@default:true,org.eclipse.jetty.http@default:default,org.eclipse.core.filesystem@default:default,org.eclipse.jdt.launching@default:default,org.eclipse.core.commands@default:default,org.eclipse.jdt.debug@default:default,org.eclipse.text@default:default,org.eclipse.jetty.ajp@default:default,org.eclipse.core.variables@default:default,org.apache.geronimo.specs.geronimo-annotation_1.0_spec@default:default,slf4j.api@default:default,ch.qos.logback.core@default:default,jcl.over.slf4j@default:default,org.mortbay.jetty.jsp-api-2.1-glassfish@default:default,ch.qos.logback.classic@default:default,org.eclipse.core.jobs@default:default,org.eclipse.jetty.osgi.httpservice@default:default,org.eclipse.jetty.plus@default:default,org.eclipse.jdt.core@default:default,org.eclipse.jetty.osgi.boot.warurl@default:true,org.mortbay.jetty.jsp-2.1-glassfish@default:default,org.eclipse.jetty.io@default:default,org.eclipse.jetty.continuation@default:default"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<stringAttribute key="workspace_bundles" value="org.apache.commons.logging@default:default,org.nuxeo.ecm.core.api@default:default,com.sun.xml.relaxngDatatype@default:default,org.jaxen@default:default,org.eclipse.equinox.osgi.extensions.endorsedlibs@default:false,cup.java-cup@default:default,org.nuxeo.ecm.core.schema@default:default,org.nuxeo.runtime@default:default,org.apache.commons.lang@default:default,org.dom4j@default:default,commons-jexl.commons-jexl@default:default,org.apache.commons.collections@default:default,org.nuxeo.logging@default:default,org.nuxeo.common@default:default,org.apache.xerces@default:default,com.sun.xml.xsom@default:default,org.nuxeo.ecm.platform.usermanager@default:false,osgitest@default:default,org.nuxeo.ecm.directory.api@default:default,com.springsource.org.apache.xmlcommons@default:default,commons-io.commons-io@default:default,org.eclipse.osgi@-1:true,org.nuxeo.ecm.platform.usermanager.api@default:default,joda-time.joda-time@default:default"/>
+</launchConfiguration>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Nuxeo User Manager Module API
+Bundle-SymbolicName: org.nuxeo.ecm.platform.usermanager.api
+Bundle-Version: 5.3.1.-SNAPSHOT
+Bundle-Vendor: Nuxeo
+Bundle-Localization: plugin
+Export-Package: org.nuxeo.ecm.platform.usermanager;usermanager.api=split;mandatory:="usermanager.api",
+ org.nuxeo.ecm.platform.usermanager.exceptions
+Require-Bundle: org.nuxeo.ecm.core.api
+Archiver-Version: Plexus Archiver
+Build-Jdk: 1.6.0_03
+Created-By: Apache Maven
+Built-By: hudson
+Eclipse-LazyStart: false
