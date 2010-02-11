@@ -28,7 +28,6 @@ define "nuxeo-jetty-osgi", :layout => layout do
   define "org.nuxeo.ecm.directory.api" do
     compile.with NUXEO_ECM_CORE[:api], NUXEO_COMMON, NUXEO_RUNTIME, APACHE[:commons_logging]
     package(:jar).with(:manifest=>_('META-INF/MANIFEST.MF')).enhance do |file|
-      file.with :manifest=>_('META-INF/MANIFEST.MF')
       file.include _("OSGI-INF"), "OSGI-INF/*"
     end
   end
@@ -36,7 +35,6 @@ define "nuxeo-jetty-osgi", :layout => layout do
   define "org.nuxeo.ecm.directory.core" do
     compile.with project("org.nuxeo.ecm.directory.api"), NUXEO_ECM_CORE[:api], NUXEO_RUNTIME, NUXEO_COMMON, APACHE[:commons_logging], NUXEO_ECM_CORE[:schema]
     package(:jar).with(:manifest=>_('META-INF/MANIFEST.MF')).enhance do |file|
-      file.with :manifest=>_('META-INF/MANIFEST.MF')
       file.include _("OSGI-INF"), "OSGI-INF/*"
     end    
   end
@@ -44,7 +42,6 @@ define "nuxeo-jetty-osgi", :layout => layout do
   define "org.nuxeo.ecm.platform.usermanager" do
     compile.with project("org.nuxeo.ecm.platform.usermanager.api"), project("org.nuxeo.ecm.directory.api"), NUXEO_ECM_CORE[:api], APACHE[:commons_logging], NUXEO_RUNTIME
     package(:jar).with(:manifest=>_('META-INF/MANIFEST.MF')).enhance do |file|
-      file.with :manifest=>_('META-INF/MANIFEST.MF')
       file.include _("OSGI-INF"), "OSGI-INF/*"
     end
   end
@@ -52,7 +49,6 @@ define "nuxeo-jetty-osgi", :layout => layout do
   define "org.nuxeo.ecm.platform.usermanager.api" do
     compile.with project("org.nuxeo.logging"), NUXEO_ECM_CORE[:api], COMMON[:collections], APACHE[:commons_logging], NUXEO_RUNTIME, NUXEO_COMMON
     package(:jar).with(:manifest=>_('META-INF/MANIFEST.MF')).enhance do |file|
-      file.with :manifest=>_('META-INF/MANIFEST.MF')
       file.include _("OSGI-INF"), "OSGI-INF/*"
     end
   end
