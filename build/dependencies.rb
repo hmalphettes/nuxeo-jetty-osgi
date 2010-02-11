@@ -6,7 +6,8 @@ NUXEO_ECM_PLATFORM = {
 }
 
 NUXEO_ECM_CORE = {
-  :api => "org.nuxeo.ecm.core:nuxeo-core-api:jar:#{CORE_VERSION}"
+  :api => "org.nuxeo.ecm.core:nuxeo-core-api:jar:#{CORE_VERSION}",
+  :schema => "org.nuxeo.ecm.core:nuxeo-core-schema:jar:#{CORE_VERSION}"
 }
 
 NUXEO_RUNTIME = "org.nuxeo.runtime:nuxeo-runtime:jar:#{CORE_VERSION}"

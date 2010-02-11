@@ -9,7 +9,6 @@ require "build/repositories.rb"
 VERSION_NUMBER = "5.3.1-SNAPSHOT"
 # Group identifier for your projects
 GROUP = "nuxeo-jetty-osgi"
-COPYRIGHT = "Intalio"
 
 layout = Layout.new
 layout[:source, :main, :java] = 'src'
@@ -19,7 +18,6 @@ define "nuxeo-jetty-osgi", :layout => layout do
 
   project.version = VERSION_NUMBER
   project.group = GROUP
-  manifest["Implementation-Vendor"] = COPYRIGHT
   compile.options.source = "1.5"
   compile.options.target = "1.5"
 
@@ -35,6 +33,14 @@ define "nuxeo-jetty-osgi", :layout => layout do
     end
   end
 
+  define "org.nuxeo.ecm.directory.core" do
+    compile.with project("org.nuxeo.ecm.directory.api"), NUXEO_ECM_CORE[:api], NUXEO_RUNTIME, NUXEO_COMMON, APACHE[:commons_logging], NUXEO_ECM_CORE[:schema]
+    package(:jar).with(:manifest=>_('META-INF/MANIFEST.MF')).enhance do |file|
+      file.with :manifest=>_('META-INF/MANIFEST.MF')
+      file.include _("OSGI-INF"), "OSGI-INF/*"
+    end    
+  end
+  
   define "org.nuxeo.ecm.platform.usermanager" do
     compile.with project("org.nuxeo.ecm.platform.usermanager.api"), project("org.nuxeo.ecm.directory.api"), NUXEO_ECM_CORE[:api], APACHE[:commons_logging], NUXEO_RUNTIME
     package(:jar).with(:manifest=>_('META-INF/MANIFEST.MF')).enhance do |file|
