@@ -18,5 +18,10 @@ COMMON = {
 }
 
 APACHE = {
-  :commons_logging => "commons-logging:commons-logging:jar:1.1"
+  :commons_logging => "commons-logging:commons-logging:jar:1.1",
+  :common_lang => "commons-lang:commons-lang:jar:2.3"
 }
+
+HIBERNATE = "org.hibernate:hibernate:jar:3.2.0.ga"
+
+OPEN_CSV = "net.sf.opencsv:opencsv:jar:1.7"

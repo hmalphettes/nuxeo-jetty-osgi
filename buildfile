@@ -39,6 +39,17 @@ define "nuxeo-jetty-osgi", :layout => layout do
     end    
   end
   
+  define "org.nuxeo.ecm.directory.sql" do
+    compile.with project("org.nuxeo.ecm.directory.api"), project("org.nuxeo.ecm.directory.core"), NUXEO_ECM_CORE[:api], HIBERNATE, APACHE[:commons_logging], NUXEO_RUNTIME, NUXEO_ECM_CORE[:schema], NUXEO_COMMON, APACHE[:common_lang], OPEN_CSV
+    package(:jar).with(:manifest=>_('META-INF/MANIFEST.MF')).enhance do |file|
+      file.include _("OSGI-INF"), "OSGI-INF/*"
+      file.include _("user2group.csv")
+      file.include _("users.csv")
+      file.include _("groups.csv")
+      file.include _("upgrade-reference-tables.sql")
+    end
+  end
+  
   define "org.nuxeo.ecm.platform.usermanager" do
     compile.with project("org.nuxeo.ecm.platform.usermanager.api"), project("org.nuxeo.ecm.directory.api"), NUXEO_ECM_CORE[:api], APACHE[:commons_logging], NUXEO_RUNTIME
     package(:jar).with(:manifest=>_('META-INF/MANIFEST.MF')).enhance do |file|
