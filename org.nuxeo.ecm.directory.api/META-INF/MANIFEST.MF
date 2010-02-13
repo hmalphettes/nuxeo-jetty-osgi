@@ -6,7 +6,8 @@ Bundle-Version: 5.3.1.-SNAPSHOT
 Bundle-Vendor: Nuxeo
 Bundle-Localization: bundle
 Export-Package: org.nuxeo.ecm.directory,org.nuxeo.ecm.directory.api
-Require-Bundle: org.nuxeo.ecm.core.api
+Require-Bundle: org.nuxeo.ecm.core.api,
+ org.nuxeo.runtime;visibility:=reexport
 Archiver-Version: Plexus Archiver
 Build-Jdk: 1.6.0_03
 Created-By: Apache Maven

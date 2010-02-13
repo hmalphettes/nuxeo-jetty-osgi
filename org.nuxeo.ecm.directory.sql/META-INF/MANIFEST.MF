@@ -12,4 +12,5 @@ Nuxeo-Component: OSGI-INF/SQLDirectoryFactory.xml
 Require-Bundle: org.nuxeo.ecm.directory,
  org.nuxeo.runtime,
  org.nuxeo.ecm.core.api;bundle-version="1.6.1",
- org.nuxeo.ecm.directory.api;bundle-version="5.3.1"
+ org.nuxeo.ecm.directory.api;bundle-version="5.3.1",
+ org.apache.commons.lang;bundle-version="2.3.0"

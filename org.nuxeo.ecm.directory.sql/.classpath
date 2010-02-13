@@ -3,8 +3,7 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate/3.2.0.ga/hibernate-3.2.0.ga.jar"/>
-	<classpathentry kind="var" path="M2_REPO/net/sf/opencsv/opencsv/1.7/opencsv-1.7.jar"/>
-	<classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.3/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="/jettyhome/endorsedlibs/hibernate-3.2.4.SP1_CP01-brew_NXP-3881-NXP-4604.jar"/>
+	<classpathentry kind="lib" path="/jettyhome/endorsedlibs/opencsv-1.7.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
